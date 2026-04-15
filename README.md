@@ -1,155 +1,140 @@
-# AI-Email-Generation
+# 📧 Email Generation Assistant (AI Engineer Assessment)
 
-#📧 Email Generation Assistant (AI Engineer Assessment)
-#🚀 Project Overview
+## 🚀 Overview
+This project is an AI-powered Email Generation Assistant that generates professional emails using LLMs based on:
+- **Intent** (purpose)
+- **Key Facts** (important points)
+- **Tone** (formal, casual, etc.)
 
-This project is an AI-powered Email Generation Assistant that creates professional emails based on user inputs using Large Language Models (LLMs).
+---
 
-##The system takes:
+## 🧠 Features
+- LLM-based email generation
+- Advanced Prompt Engineering (role-based + structured prompts)
+- Custom evaluation metrics
+- Model comparison (Basic vs Advanced prompting)
+- CSV-based evaluation output
 
-Intent (purpose of the email)
-Key Facts (important points to include)
-Tone (formal, casual, empathetic, etc.)
+---
 
-and generates a well-structured email.
+## ⚙️ Tech Stack
+Python, Groq API, Pandas, dotenv
 
-#🧠 Key Features
-Prompt-based email generation using LLM
-Advanced Prompt Engineering (Role-based + structured prompting)
-Custom evaluation metrics for performance measurement
-Model comparison (Basic vs Advanced prompting)
-Automated evaluation with structured output (CSV)
-#⚙️ Tech Stack
-Python 3.x
-Groq API (LLM)
-Pandas
-dotenv
-#📂 Project Structure
+---
+
+## 📂 Structure
 email_generation_assistant/
-│
-├── generator.py          # Email generation logic (LLM prompts)
-├── evaluator.py          # Custom metrics implementation
-├── scenarios.py          # Test scenarios + reference emails
-├── main.py               # Runs full evaluation
-├── results.csv           # Evaluation output
-├── .env                  # API key
+├── generator.py
+├── evaluator.py
+├── scenarios.py
+├── main.py
+├── results.csv
+├── .env
 ├── requirements.txt
 └── README.md
-🧪 Prompt Engineering Strategy
-##Basic Prompt
 
-A simple instruction-based prompt:
 
-Generates email from intent, facts, and tone
-##Advanced Prompt (Used for Improvement)
-Role-based prompting (acts as professional assistant)
-Structured instructions
-Enforces:
-Fact inclusion
-Proper tone
-Clear formatting
-📊 Custom Evaluation Metrics
-##1. Fact Recall Score
+---
 
-Measures whether all provided key facts are included in the generated email.
+## 🧪 Prompting Strategy
+- **Basic Prompt**: Simple instruction-based generation  
+- **Advanced Prompt**: Role-based + structured instructions for better:
+  - Fact inclusion
+  - Tone consistency
+  - Formatting
 
-Logic:
+---
 
-score = (facts present in output) / (total facts)
-##2. Tone Accuracy Score
+## 📊 Evaluation Metrics
+1. **Fact Recall Score**  
+   = Facts included / Total facts  
 
-Checks whether the generated email matches the expected tone.
+2. **Tone Accuracy Score**  
+   = Tone match (0–1)  
 
-Logic:
+3. **Conciseness Score**  
+   = Based on clarity and length  
 
-Keyword-based or LLM-based evaluation
-Score: 0 to 1
-##3. Conciseness Score
+**Final Score:**  
+`0.4 * Fact + 0.3 * Tone + 0.3 * Conciseness`
 
-Measures how clear and concise the email is.
+---
 
-Logic:
+## 🧾 Test Scenarios
+10 scenarios including:
+- Follow-up
+- Leave request
+- Project update
+- Apology
+- Client onboarding
+- Meeting reminder
+- Feedback request
+- Invoice reminder
+- Job application
+- Thank you email
 
-Based on word count threshold
-Shorter, well-structured emails score higher
-Final Score
-Final Score = (Fact Score * 0.4) + (Tone Score * 0.3) + (Conciseness * 0.3)
-🧾 Test Scenarios
+---
 
-#10 different scenarios were created, including:
+## ▶️ How to Run
 
-Follow-up email
-Leave request
-Project update
-Apology email
-Client onboarding
-Meeting reminder
-Feedback request
-Invoice reminder
-Job application
-Thank you email
-
-Each scenario includes:
-
-Input (Intent, Facts, Tone)
-Human Reference Email (ideal output)
-##▶️ How to Run
-1. Clone Repository
-git clone <your-repo-link>
-cd email_generation_assistant
-2. Install Dependencies
+### 1. Install dependencies
 pip install -r requirements.txt
-3. Add API Key
 
-##Create .env file:
 
-GROQ_API_KEY=your_api_key_here
-4. Run Evaluation
+### 2. Add API Key (.env)
+GROQ_API_KEY=your_api_key
+
+
+### 3. Run
 python main.py
-📈 Output
 
-The system generates a CSV file:
+
+## 📈 Output
+Generated file:
 
 results.csv
 
-##Example:
-
+Example:
 intent,model,fact_score,tone_score,conciseness,final_score
-Follow up after meeting,basic,1.0,1.0,0.7,0.91
-Follow up after meeting,advanced,1.0,1.0,1.0,1.0
-...
-#🔍 Model Comparison
-Best Model: Advanced Prompting
-Average Scores:
-Advanced: 0.985
-Basic: 0.886
-#📌 Analysis
+Follow up,basic,1.0,1.0,0.7,0.91
+Follow up,advanced,1.0,1.0,1.0,1.0
 
-The advanced prompting strategy significantly outperforms the basic model.
 
-Key Improvements:
-Better fact inclusion
-More consistent tone accuracy
-Improved structure and clarity
-Failure in Basic Model:
-Misses some key facts
-Less structured output
-Lower conciseness in some cases
-#✅ Conclusion
+---
 
-The advanced prompting strategy is recommended for production use due to:
+## 🔍 Model Comparison
+**Best Model:** Advanced Prompting  
 
-Higher reliability
-Better output quality
-Strong performance across all custom metrics
-📎 Assumptions
-LLM responses are deterministic enough for evaluation
-Fact matching is based on keyword presence
-Tone evaluation is simplified (can be improved using LLM judge)
-#📦 Deliverables Included
-✔ Source Code
-✔ Prompt Templates
-✔ Custom Metrics Implementation
-✔ Evaluation Script
-✔ CSV Output (results)
-✔ Model Comparison Analysis
+**Average Scores:**
+- Advanced: 0.985  
+- Basic: 0.886  
+
+---
+
+## 📌 Analysis
+- Advanced prompting performs better in:
+  - Fact inclusion
+  - Tone accuracy
+  - Structure and clarity  
+- Basic model sometimes misses facts and produces less structured output  
+
+---
+
+## ✅ Conclusion
+Advanced prompting is recommended for production due to higher reliability and better output quality.
+
+---
+
+## 📎 Assumptions
+- Fact matching uses keyword presence  
+- Tone evaluation is simplified  
+
+---
+
+## 📦 Deliverables
+- Source code  
+- Prompt templates  
+- Evaluation script  
+- CSV results  
+- Model comparison
+
