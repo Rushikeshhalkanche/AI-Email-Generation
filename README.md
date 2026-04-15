@@ -1,11 +1,11 @@
 # AI-Email-Generation
 
-📧 Email Generation Assistant (AI Engineer Assessment)
-🚀 Project Overview
+#📧 Email Generation Assistant (AI Engineer Assessment)
+#🚀 Project Overview
 
 This project is an AI-powered Email Generation Assistant that creates professional emails based on user inputs using Large Language Models (LLMs).
 
-The system takes:
+##The system takes:
 
 Intent (purpose of the email)
 Key Facts (important points to include)
@@ -13,18 +13,18 @@ Tone (formal, casual, empathetic, etc.)
 
 and generates a well-structured email.
 
-🧠 Key Features
+#🧠 Key Features
 Prompt-based email generation using LLM
 Advanced Prompt Engineering (Role-based + structured prompting)
 Custom evaluation metrics for performance measurement
 Model comparison (Basic vs Advanced prompting)
 Automated evaluation with structured output (CSV)
-⚙️ Tech Stack
+#⚙️ Tech Stack
 Python 3.x
 Groq API (LLM)
 Pandas
 dotenv
-📂 Project Structure
+#📂 Project Structure
 email_generation_assistant/
 │
 ├── generator.py          # Email generation logic (LLM prompts)
@@ -36,12 +36,12 @@ email_generation_assistant/
 ├── requirements.txt
 └── README.md
 🧪 Prompt Engineering Strategy
-Basic Prompt
+##Basic Prompt
 
 A simple instruction-based prompt:
 
 Generates email from intent, facts, and tone
-Advanced Prompt (Used for Improvement)
+##Advanced Prompt (Used for Improvement)
 Role-based prompting (acts as professional assistant)
 Structured instructions
 Enforces:
@@ -49,14 +49,14 @@ Fact inclusion
 Proper tone
 Clear formatting
 📊 Custom Evaluation Metrics
-1. Fact Recall Score
+##1. Fact Recall Score
 
 Measures whether all provided key facts are included in the generated email.
 
 Logic:
 
 score = (facts present in output) / (total facts)
-2. Tone Accuracy Score
+##2. Tone Accuracy Score
 
 Checks whether the generated email matches the expected tone.
 
@@ -64,7 +64,7 @@ Logic:
 
 Keyword-based or LLM-based evaluation
 Score: 0 to 1
-3. Conciseness Score
+##3. Conciseness Score
 
 Measures how clear and concise the email is.
 
@@ -76,7 +76,7 @@ Final Score
 Final Score = (Fact Score * 0.4) + (Tone Score * 0.3) + (Conciseness * 0.3)
 🧾 Test Scenarios
 
-10 different scenarios were created, including:
+#10 different scenarios were created, including:
 
 Follow-up email
 Leave request
@@ -93,7 +93,7 @@ Each scenario includes:
 
 Input (Intent, Facts, Tone)
 Human Reference Email (ideal output)
-▶️ How to Run
+##▶️ How to Run
 1. Clone Repository
 git clone <your-repo-link>
 cd email_generation_assistant
@@ -101,7 +101,7 @@ cd email_generation_assistant
 pip install -r requirements.txt
 3. Add API Key
 
-Create .env file:
+##Create .env file:
 
 GROQ_API_KEY=your_api_key_here
 4. Run Evaluation
@@ -112,18 +112,18 @@ The system generates a CSV file:
 
 results.csv
 
-Example:
+##Example:
 
 intent,model,fact_score,tone_score,conciseness,final_score
 Follow up after meeting,basic,1.0,1.0,0.7,0.91
 Follow up after meeting,advanced,1.0,1.0,1.0,1.0
 ...
-🔍 Model Comparison
+#🔍 Model Comparison
 Best Model: Advanced Prompting
 Average Scores:
 Advanced: 0.985
 Basic: 0.886
-📌 Analysis
+#📌 Analysis
 
 The advanced prompting strategy significantly outperforms the basic model.
 
@@ -135,7 +135,7 @@ Failure in Basic Model:
 Misses some key facts
 Less structured output
 Lower conciseness in some cases
-✅ Conclusion
+#✅ Conclusion
 
 The advanced prompting strategy is recommended for production use due to:
 
@@ -146,7 +146,7 @@ Strong performance across all custom metrics
 LLM responses are deterministic enough for evaluation
 Fact matching is based on keyword presence
 Tone evaluation is simplified (can be improved using LLM judge)
-📦 Deliverables Included
+#📦 Deliverables Included
 ✔ Source Code
 ✔ Prompt Templates
 ✔ Custom Metrics Implementation
