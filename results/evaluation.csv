@@ -1,0 +1,21 @@
+intent,model,fact_score,tone_score,conciseness,final_score
+Follow up after meeting,basic,1.0,1.0,0.7,0.91
+Follow up after meeting,advanced,1.0,1.0,1.0,1.0
+Request leave,basic,1.0,1.0,1.0,1.0
+Request leave,advanced,1.0,1.0,1.0,1.0
+Send project update,basic,1.0,1.0,0.4,0.82
+Send project update,advanced,1.0,1.0,1.0,1.0
+Apologize for delay,basic,1.0,1.0,0.7,0.91
+Apologize for delay,advanced,1.0,1.0,1.0,1.0
+Client onboarding,basic,1.0,1.0,0.4,0.82
+Client onboarding,advanced,1.0,1.0,1.0,1.0
+Meeting reminder,basic,1.0,1.0,0.7,0.91
+Meeting reminder,advanced,1.0,1.0,1.0,1.0
+Feedback request,basic,1.0,1.0,1.0,1.0
+Feedback request,advanced,1.0,1.0,1.0,1.0
+Invoice reminder,basic,1.0,0.5,0.7,0.76
+Invoice reminder,advanced,1.0,0.5,1.0,0.85
+Job application,basic,1.0,1.0,0.4,0.82
+Job application,advanced,1.0,1.0,1.0,1.0
+Thank you email,basic,1.0,1.0,0.7,0.91
+Thank you email,advanced,1.0,1.0,1.0,1.0

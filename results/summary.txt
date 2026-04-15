@@ -1,0 +1,20 @@
+Best Model: Advanced Prompting Strategy
+
+Average Scores:
+- Advanced: 0.985
+- Basic: 0.886
+
+Analysis:
+The advanced prompting approach significantly outperforms the basic model across all evaluation metrics. 
+The biggest improvement is seen in conciseness and fact recall, where the advanced model consistently includes all required key facts while maintaining a structured and professional tone.
+
+Failure Mode of Basic Model:
+The basic model occasionally misses key facts and produces less structured responses, leading to lower conciseness and clarity scores.
+
+Recommendation:
+The advanced prompting strategy is recommended for production use due to its:
+- Higher consistency in tone
+- Better fact inclusion
+- More professional formatting
+
+This makes it more reliable for real-world email generation tasks.
